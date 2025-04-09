@@ -15,7 +15,7 @@ Instalación de luz completa.
 Instalación de agua fría y caliente.
 
 `,
-        precioPorMetroCuadrado: 630,
+        precioPorMetroCuadrado: 520,
         imagenes: [
             "img/tronco1.jpg",
             "img/tronco2.jpg",
@@ -39,7 +39,7 @@ Instalación de luz completa.
 Instalación de agua fría y caliente.
 
 `,
-        precioPorMetroCuadrado: 550,
+        precioPorMetroCuadrado: 520,
         imagenes: [
             "img/cabaña eucalipto1.jpg"
         ]
@@ -55,7 +55,7 @@ Techo a la vista recubierto de machimbre aislante y chapa de cinc. Baño con lad
 Mesada con pileta lavatorio, canillas frio calor, ducha con perillas frio calor. Ventana a elección del cliente de madera o aluminio.
 
 `,
-        precioPorMetroCuadrado: 670,
+        precioPorMetroCuadrado: 520,
         imagenes: [
             "img/quebracho1.jpg"
         ]
@@ -84,6 +84,7 @@ function mostrarConstrucciones() {
         construccionDiv.innerHTML = `
             <h3>${construccion.nombre}</h3>
             <p>${construccion.descripcion}</p>
+            <p>Precio por m²: U$D ${construccion.precioPorMetroCuadrado}</p>
             <button id="btnWhatsappConstruccion-${index}" class="btn-whatsapp">Solicitar presupuesto</button>
         `;
 
