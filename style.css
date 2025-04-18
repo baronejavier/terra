@@ -1,0 +1,288 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Logo en el encabezado */
+.logo-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo-container img.logo {
+    max-width: 350px;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+/* Estilo del encabezado */
+header {
+     background-color: #35424a;   
+    padding: 100px 0;
+    text-align: center;
+    background-image: url('img/fondo.jpeg');
+    background-size: cover; /* La imagen se ajustará para cubrir todo el espacio disponible */
+    background-position: center; /* La imagen se centrará en el encabezado */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+}
+
+header h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    color: rgb(210, 224, 3);
+    text-shadow: 2px 2px 4px rgba(92, 47, 16, 0.911);
+}
+
+header h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(92, 47, 16, 0.911);
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color:  rgb(170, 182, 1);;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 1.5rem;
+}
+
+nav ul li a:hover {
+    background-color: rgb(127, 136, 2);
+}
+
+/* Sección General */
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 60px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #35424a;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el contenedor de servicios */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las tarjetas de servicio */
+}
+
+/* Estilo para cada tarjeta de servicio */
+.service-card {
+    background: #f9f9f9; /* Fondo claro para las tarjetas */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Asegura que las tarjetas se adapten a pantallas más pequeñas */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+    }
+}
+
+/* Sección de contacto */
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    padding: 15px 30px;
+    background-color: #e8491d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.contact-section button:hover {
+    background-color: #d7370f;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #35424a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+footer a {
+    color: #83979c; /* Cambia el color del enlace (marrón en este caso) */
+    text-decoration: none; /* Quita el subrayado */
+    font-weight: bold; /* Opcional: Hace que el texto sea más destacado */
+}
+
+footer a:visited {
+    color: #83979c; /* Mantiene el mismo color después de hacer clic */
+    text-decoration: none;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .services-section .service-card, 
+    .properties-section .property-card {
+        max-width: 90%;
+    }
+
+    .contact-section form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .services-section .service-card, 
+    .properties-section .property-card {
+        max-width: 100%;
+    }
+}
+
+/* Estilos para las construcciones */
+.construccion {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    overflow: hidden; /* Para ocultar cualquier contenido que sobresalga */
+    box-sizing: border-box; /* Para incluir el padding y border en el ancho total */
+    max-width: 500px;
+    text-align: justify;
+}
+
+.construccion img {
+    width: 100%;
+    height: auto; /* Establece la altura fija de las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+    display: block; /* Elimina el espacio blanco debajo de la imagen */
+}
+
+/* Estilo para el contenedor de las construcciones */
+#lista-construccion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilos del botón flotante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    width: 15%; /* Ancho cuadrado */
+    height: 15%; /* Altura cuadrada */
+    background-image: url(img/whatsappboton.png); /* Ruta de tu imagen */
+    background-size: cover; /* Para que la imagen se ajuste al botón */
+    text-indent: -9999px; /* Oculta el texto del botón */
+    cursor: pointer;
+    background-position: center; /* Posición centrada de la imagen */
+}
+
+.btn-whatsapp {
+    background-color: #008a32; /* Color de fondo verde WhatsApp */
+    color: white; /* Texto en blanco */
+    padding: 12px 24px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño del texto */
+    border: none; /* Sin bordes */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio de cursor al pasar sobre el botón */
+    display: inline-block; /* Para alinearse correctamente con otros elementos */
+    transition: background-color 0.3s ease; /* Animación al pasar el mouse */
+    font-weight: bold;
+  }
+  
+  .btn-whatsapp:hover {
+    background-color: #128C7E; /* Cambio de color al pasar el mouse */
+  }
+  
+  .btn-whatsapp:active {
+    background-color: #075E54; /* Color cuando se hace clic */
+  }
+  
